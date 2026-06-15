@@ -11,7 +11,7 @@ export default function HomePage() {
   const [selectedImage, setSelectedImage] = useState(null);
   const [imagePreview, setImagePreview] = useState(null);
   const [isScanning, setIsScanning] = useState(false);
-  const [selectedLanguage, setSelectedLanguage] = useState('hi-IN');
+  const [selectedLanguage, setSelectedLanguage] = useState('en-US');
   const [toast, setToast] = useState(null);
   const [scanProgress, setScanProgress] = useState('');
 

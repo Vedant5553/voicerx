@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 
 const languages = [
+  { code: 'en-US', label: '🇬🇧 English' },
   { code: 'hi-IN', label: '🇮🇳 Hindi' },
   { code: 'mr-IN', label: '🇮🇳 Marathi' },
   { code: 'bn-IN', label: '🇮🇳 Bengali' },
@@ -11,13 +12,15 @@ const languages = [
 ];
 
 export default function LanguageSelector({ onChange }) {
-  const [selected, setSelected] = useState('hi-IN');
+  const [selected, setSelected] = useState('en-US');
 
   useEffect(() => {
     const saved = localStorage.getItem('voicerx_lang');
     if (saved) {
       setSelected(saved);
       onChange?.(saved);
+    } else {
+      onChange?.('en-US');
     }
   }, []);
 

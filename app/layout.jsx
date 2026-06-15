@@ -36,7 +36,7 @@ export default function RootLayout({ children }) {
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta name="description" content="VoiceRx - Scan your prescription, hear medicine instructions in your language. Powered by AI." />
-        <meta name="theme-color" content="#1D9E75" />
+        <meta name="theme-color" content="#10B981" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -59,10 +59,10 @@ export default function RootLayout({ children }) {
             justifyContent: 'space-between',
             position: 'sticky',
             top: 0,
-            background: 'rgba(255,255,255,0.92)',
+            background: 'rgba(9, 13, 22, 0.8)',
             backdropFilter: 'blur(20px)',
             zIndex: 40,
-            borderBottom: '1px solid var(--border-light)',
+            borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
           }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
               <div style={{
