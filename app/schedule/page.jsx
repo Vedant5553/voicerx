@@ -53,7 +53,12 @@ export default function SchedulePage() {
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ text, languageCode: language }),
         });
-        data = await response.json();
+        const contentType = response.headers.get('content-type');
+        if (response.ok && contentType && contentType.includes('application/json')) {
+          data = await response.json();
+        } else {
+          throw new Error('Server returned non-JSON/error response');
+        }
       } catch (fetchError) {
         console.warn('TTS API fetch failed, falling back to Web Speech API:', fetchError.message);
         data = { success: true, fallback: true };
